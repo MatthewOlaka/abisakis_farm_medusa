@@ -5,7 +5,7 @@
     "buildCommand": "npm run build"
   },
   "deploy": {
-    "startCommand": "echo '=== ADMIN CHECK ===' && find .medusa -name 'index.html' && ls -la .medusa/admin/ 2>&1 && echo '=== END CHECK ===' && npx medusa db:migrate && npx medusa start",
+    "startCommand": "npx medusa db:migrate && npx medusa start",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
