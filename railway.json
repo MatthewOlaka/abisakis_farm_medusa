@@ -5,7 +5,7 @@
     "buildCommand": "npm run build"
   },
   "deploy": {
-    "startCommand": "npx medusa db:migrate && npx medusa start",
+    "startCommand": "echo '--- .medusa contents ---' && ls -la .medusa/ && ls -la .medusa/admin/ 2>/dev/null || echo 'No admin dir' && npx medusa db:migrate && npx medusa start",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
